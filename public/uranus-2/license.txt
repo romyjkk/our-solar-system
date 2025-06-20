@@ -1,0 +1,11 @@
+Model Information:
+* title:	Uranus 1 51118
+* source:	https://sketchfab.com/3d-models/uranus-1-51118-a4a25dd003744b298b899b72f5935683
+* author:	atticus.grubisic.063 (https://sketchfab.com/atticus.grubisic.063)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Uranus 1 51118" (https://sketchfab.com/3d-models/uranus-1-51118-a4a25dd003744b298b899b72f5935683) by atticus.grubisic.063 (https://sketchfab.com/atticus.grubisic.063) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

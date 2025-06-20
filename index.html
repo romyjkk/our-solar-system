@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our solar system</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/",
+          "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.13.0/index.js",
+          "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.13.0/ScrollTrigger.js",
+          "gsap/ScrollSmoother": "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <article id="loader">
+      <h1>Loading...</h1>
+      <progress id="progress-bar" value="0" max="100"></progress>
+      <span id="progress-percentage">0%</span>
+    </article>
+
+      <main id="main-container">
+        <div id="container"></div>
+
+        <section id="scroll-container">
+          <section id="intro" class="intro">
+            <h1>Welcome to our solar system✨🪐</h1>
+            <p>Start scrolling to explore!</p>
+          </section>
+
+          <section id="sun" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>The Sun</h2>
+                <p>
+                  The Sun is the star at the center of our solar system. It is a nearly
+                  perfect sphere of hot plasma, heated to incandescence by nuclear
+                  fusion reactions in its core, radiating the energy mainly as light and
+                  infrared radiation.
+                </p>
+              </div>
+              <!-- <div class="filler"></div> -->
+          </section>
+
+
+          <section id="mercury" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>Mercury</h2>
+                <p>
+                  Mercury is the smallest planet in our solar system and the closest to
+                  the Sun. It is a rocky planet with a thin atmosphere, and it has no
+                  moons.
+                </p>
+              </div>
+              <!-- <div class="spacer"></div> -->
+          </section>
+
+          
+          <section id="venus" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>Venus</h2>
+                <p>
+                  Venus is the second planet from the Sun and is similar in structure to
+                  Earth, but it has a thick, toxic atmosphere and surface temperatures
+                  hot enough to melt lead.
+                </p>
+              </div>
+          </section>
+          
+          <section id="earth" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>Earth</h2>
+                <p>
+                  Earth is the third planet from the Sun and the only astronomical object
+                  known to harbor life. It has a diverse climate and a variety of
+                  ecosystems.
+                </p>
+              </div>
+          </section>
+
+          <section id="mars" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>Mars</h2>
+                <p>
+                  Mars is the fourth planet from the Sun and is often called the "Red
+                  Planet" due to its reddish appearance, which is caused by iron oxide
+                  on its surface.
+                </p>
+              </div>
+          </section>
+
+          <section id="jupiter" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>Jupiter</h2>
+                <p>
+                  Jupiter is the largest planet in our solar system and is known for its
+                  Great Red Spot, a giant storm that has been raging for hundreds of
+                  years.
+                </p>
+              </div>
+          </section>
+
+          <section id="saturn" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>Saturn</h2>
+                <p>
+                  Saturn is the sixth planet from the Sun and is famous for its stunning
+                  ring system, which is made up of ice and rock particles.
+                </p>
+              </div>
+          </section>
+
+          <section id="uranus" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>Uranus</h2>
+                <p>
+                  Uranus is the seventh planet from the Sun and is unique for its
+                  tilted axis, which causes extreme seasonal variations.
+                </p>
+              </div>
+          </section>
+
+          <section id="neptune" class="card-container">
+              <div class="info">
+                <div class="bg"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <h2>Neptune</h2>
+                <p>
+                  Neptune is the eighth and farthest planet from the Sun. It is known for
+                  its deep blue color and strong winds, making it one of the windiest
+                  places in the solar system.
+                </p>
+              </div>
+          </section>
+
+          <div class="filler"></div>
+        </section>
+      </main>
+    
+      <script type="module" src="main.js"></script>
+  </body>
+</html>

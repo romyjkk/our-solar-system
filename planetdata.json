@@ -1,0 +1,48 @@
+{
+    "planets": [
+        {
+            "name": "sun",
+            "camera": { "x": 0, "y": 0, "z": 35 },
+            "lookAt": { "x": 10, "y": 0, "z": 0 }
+        },
+        { "name": "mercury",
+            "camera": { "x": 0.8, "y": 0, "z": 41 },
+            "lookAt": { "x": -10, "y": 0, "z": 0 }
+        },
+        {
+            "name": "venus",
+            "camera": { "x": 2, "y": 0, "z": 63 },
+            "lookAt": { "x": -10, "y": 0, "z": 0 }
+        },
+        {
+            "name": "earth",
+            "camera": { "x": 2, "y": 0, "z": 83 },
+            "lookAt": { "x": -10, "y": 0, "z": 0 }
+        },
+        {
+            "name": "mars",
+            "camera": { "x": 1, "y": 0, "z": 102 },
+            "lookAt": { "x": -10, "y": 0, "z": 0 }
+        },
+        {
+            "name": "jupiter",
+            "camera": { "x": 1.5, "y": 0, "z": 123 },
+            "lookAt": { "x": -10, "y": 0, "z": 0 }
+        },
+        {
+            "name": "saturn",
+            "camera": { "x": 2, "y": 0, "z": 145 },
+            "lookAt": { "x": -10, "y": 0, "z": 0 }
+        },
+        {
+            "name": "uranus",
+            "camera": { "x": 0.5, "y": 0, "z": 161.5 },
+            "lookAt": { "x": -10, "y": 0, "z": 0 }
+        },
+        {
+            "name": "neptune",
+            "camera": { "x": 0.5, "y": 0, "z": 182.5 },
+            "lookAt": { "x": -10, "y": 0, "z": 0 }
+        }
+    ]
+}

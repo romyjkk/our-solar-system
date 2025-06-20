@@ -1,0 +1,116 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "montserrat", sans-serif;
+  background-color: #000;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: absolute;
+  width: 100vw;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+#loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* display: none; */
+}
+
+header {
+  color: white;
+  position: fixed;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2em;
+}
+
+header div {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+/* body section {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+p,
+a {
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+#container canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Darknet", sans-serif;
+  color: white;
+}
+
+p,
+a,
+li {
+  font-family: "volunmo", sans-serif;
+  font-size: 2rem;
+}
+
+button {
+  background-color: #03170c;
+  color: white;
+  border: none;
+  padding: 0 2rem 0.3rem 2rem;
+  font-family: "volunmo", sans-serif;
+  font-size: 2rem;
+  align-self: center;
+}
+
+section.scrolling {
+  /* height: 100vh;
+  width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

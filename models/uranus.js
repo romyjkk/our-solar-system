@@ -1,0 +1,62 @@
+import * as THREE from "three";
+
+export class Uranus {
+  constructor(modelLoader) {
+    this.modelLoader = modelLoader;
+    this.uranusMesh = null;
+    this.mixer = null;
+
+    this.loadModel();
+  }
+
+  loadModel() {
+    this.modelLoader.LoadModel(
+      "scene.gltf",
+      "public/uranus-2/",
+      0.0008,
+      0.0008,
+      0.0008,
+      0,
+      0,
+      160,
+      0,
+      0,
+      0,
+      (gltf) => {
+        this.uranusMesh = gltf.scene;
+
+        this.uranusMesh.traverse((child) => {
+          if (child.isMesh) {
+            child.geometry.computeBoundingSphere();
+            const center = child.geometry.boundingSphere.center;
+            child.geometry.translate(-center.x, -center.y, -center.z);
+            child.geometry.computeBoundingSphere();
+          }
+        });
+
+        // const box = new THREE.Box3().setFromObject(this.uranusMesh);
+        // const overallCenter = new THREE.Vector3();
+        // box.getCenter(overallCenter);
+        // console.log("Uranus center after fix:", overallCenter);
+        // const box = new THREE.Box3().setFromObject(this.uranusMesh);
+        // const size = box.getSize(new THREE.Vector3());
+        // console.log(
+        //   "uranus width:",
+        //   size.x,
+        //   "height:",
+        //   size.y,
+        //   "depth:",
+        //   size.z
+        // );
+      }
+    );
+  }
+  animateUranus() {
+    if (this.uranusMesh) {
+      this.uranusMesh.rotation.y += 0.001;
+    }
+    // if (this.mixer) {
+    //   this.mixer.update(0.001);
+    // }
+  }
+}

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sun Model
+* source:	https://sketchfab.com/3d-models/sun-model-b9e1dfd765984d9b8f998bd4a6be97b5
+* author:	Black Hole (https://sketchfab.com/blckhole)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sun Model" (https://sketchfab.com/3d-models/sun-model-b9e1dfd765984d9b8f998bd4a6be97b5) by Black Hole (https://sketchfab.com/blckhole) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
