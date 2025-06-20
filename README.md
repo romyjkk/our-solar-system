@@ -24,6 +24,8 @@ Our very own solar system where you could zoom in, out and read a few facts abou
 To challenge myself even more, I decided I wanted to work with JavaScript classes, modules and also JSON data, where I stored the camera position and also the spots where the camera should look at. I enlisted the help of my [amazing boyfriend](https://github.com/kevvie303),
 who is a skilled back-end developer and helped me make my JavaScript game a lot better and also more readable. I'd say he's a better help than ChatGPT or Github Copilot, but maybe I'm a little biased.
 
+This is my first project working with Three.js and GSAP, and it's definitely not perfect. But this project was more about growth than perfection for me. Performance wise it can be a little bit laggy and it's not very pretty on small or really big screens. Both are things I'd like to improve sometime, either in this project or future ones.
+
 # Sources
 
 To be added...
