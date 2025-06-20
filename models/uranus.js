@@ -33,21 +33,6 @@ export class Uranus {
             child.geometry.computeBoundingSphere();
           }
         });
-
-        // const box = new THREE.Box3().setFromObject(this.uranusMesh);
-        // const overallCenter = new THREE.Vector3();
-        // box.getCenter(overallCenter);
-        // console.log("Uranus center after fix:", overallCenter);
-        // const box = new THREE.Box3().setFromObject(this.uranusMesh);
-        // const size = box.getSize(new THREE.Vector3());
-        // console.log(
-        //   "uranus width:",
-        //   size.x,
-        //   "height:",
-        //   size.y,
-        //   "depth:",
-        //   size.z
-        // );
       }
     );
   }
@@ -55,8 +40,5 @@ export class Uranus {
     if (this.uranusMesh) {
       this.uranusMesh.rotation.y += 0.001;
     }
-    // if (this.mixer) {
-    //   this.mixer.update(0.001);
-    // }
   }
 }

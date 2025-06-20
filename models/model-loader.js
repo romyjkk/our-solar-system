@@ -39,8 +39,6 @@ export class ModelLoader {
       if (callback) {
         callback(gltf);
       }
-
-      // window.addEventListener("mousedown", cameraAnimation);
     });
   }
 

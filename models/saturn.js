@@ -32,17 +32,6 @@ export class Saturn {
           this.animationAction.play();
           this.animationAction.timeScale = 0.5;
         }
-
-        // const box = new THREE.Box3().setFromObject(this.saturnMesh);
-        // const size = box.getSize(new THREE.Vector3());
-        // console.log(
-        //   "saturn width:",
-        //   size.x,
-        //   "height:",
-        //   size.y,
-        //   "depth:",
-        //   size.z
-        // );
       }
     );
   }

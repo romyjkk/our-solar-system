@@ -24,10 +24,6 @@ export class Mars {
       0,
       (gltf) => {
         this.marsMesh = gltf.scene;
-
-        // const box = new THREE.Box3().setFromObject(this.marsMesh);
-        // const size = box.getSize(new THREE.Vector3());
-        // console.log("Mars width:", size.x, "height:", size.y, "depth:", size.z);
       }
     );
   }

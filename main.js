@@ -5,6 +5,7 @@ import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 
 // GSAP
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -45,7 +46,7 @@ async function fetchJSON() {
   }
 }
 
-// setup
+// setup scene, renderer, camera and lights
 
 let loadingManager = new LoadingManager();
 let modelLoader = new ModelLoader(loadingManager.getManager());
@@ -67,7 +68,7 @@ document.getElementById("container").appendChild(renderer.domElement);
 
 let lightSetup = new LightSetup(modelLoader);
 
-// camera
+// create camera, position and add to scene
 
 const camera = new THREE.PerspectiveCamera(
   45,
@@ -83,7 +84,7 @@ const composer = new EffectComposer(renderer);
 const renderPass = new RenderPass(modelLoader.scene, camera);
 composer.addPass(renderPass);
 
-// bloom
+// bloom effect to make the sun (and planets) glow
 
 const bloomPass = new UnrealBloomPass(
   new THREE.Vector2(window.innerWidth, window.innerHeight),
@@ -94,7 +95,7 @@ const bloomPass = new UnrealBloomPass(
 composer.addPass(bloomPass);
 modelLoader.bloomPass = bloomPass;
 
-// starry background
+// random starry background
 
 const stars = new Array();
 for (var i = 0; i < 20000; i++) {
@@ -113,7 +114,7 @@ const starsMaterial = new THREE.PointsMaterial({ color: 0x999999 });
 const starField = new THREE.Points(starsGeometry, starsMaterial);
 modelLoader.scene.add(starField);
 
-// loading models
+// loading the models, see model-loader.js
 
 let mixer;
 let sun = new Sun(modelLoader);
@@ -126,49 +127,16 @@ let saturn = new Saturn(modelLoader);
 let uranus = new Uranus(modelLoader);
 let neptune = new Neptune(modelLoader);
 
-// const planetData = {
-//   sun: {
-//     camera: { x: 0, y: 0, z: 35 },
-//     lookAt: { x: 10, y: 0, z: 0 },
-//   },
-//   mercury: {
-//     camera: { x: 0.8, y: 0, z: 41 },
-//     lookAt: { x: -10, y: 0, z: 0 },
-//   },
-//   venus: {
-//     camera: { x: 2, y: 0, z: 63 },
-//     lookAt: { x: -10, y: 0, z: 0 },
-//   },
-//   earth: {
-//     camera: { x: 2, y: 0, z: 83 },
-//     lookAt: { x: -10, y: 0, z: 0 },
-//   },
-//   mars: {
-//     camera: { x: 1, y: 0, z: 102 },
-//     lookAt: { x: -10, y: 0, z: 0 },
-//   },
-//   jupiter: {
-//     camera: { x: 1.5, y: 0, z: 123 },
-//     lookAt: { x: -10, y: 0, z: 0 },
-//   },
-//   saturn: {
-//     camera: { x: 2, y: 0, z: 145 },
-//     lookAt: { x: -10, y: 0, z: 0 },
-//   },
-//   uranus: {
-//     camera: { x: 0.5, y: 0, z: 161.5 },
-//     lookAt: { x: -10, y: 0, z: 0 },
-//   },
-//   neptune: {
-//     camera: { x: 0.5, y: 0, z: 182.5 },
-//     lookAt: { x: -10, y: 0, z: 0 },
-//   },
-// };
+// lookAt target setup for scrolltrigger
 
 const lookAtTarget = new THREE.Vector3(10, 0, 0);
 
+// async function to setup loop for scrolltrigger
+
 async function main() {
+  // fetch planet data from json
   let planetData = await fetchJSON();
+  // set default settings for scrolltrigger, adds 'scroll snapping'
   ScrollTrigger.defaults({
     snap: {
       snapTo: document.querySelectorAll(".info").length - 9,
@@ -177,9 +145,10 @@ async function main() {
       directional: false,
     },
   });
-  // console.log(Object.keys(planets).length);
+
+  // loop through each planet (and one sun) and create scroll trigger for each
   planetData.forEach((planet) => {
-    // window.addEventListener("load", () => {
+    // setup gsap timeline
     const animation = gsap.timeline({
       scrollTrigger: {
         trigger: `#${planet.name}`,
@@ -188,12 +157,12 @@ async function main() {
         scrub: true,
         snap: 1,
         ease: "power1.inOut",
-        markers: true,
       },
       onUpdate: () => {
         camera.lookAt(planet.lookAt.x, planet.lookAt.y, planet.lookAt.z);
       },
     });
+    // gsap timeline, move camera position and lookAt target
     animation
       .to(
         camera.position,
@@ -220,14 +189,14 @@ async function main() {
 ScrollTrigger.refresh();
 main();
 
-// scroll smoother
-
+// smooth scrolling, very satisfying
 let smoother = ScrollSmoother.create({
   wrapper: "#main-container",
   content: "#scroll-container",
   // smooth: 1,
 });
 
+// animate function
 function animate() {
   if (mixer) mixer.update(0.001);
   if (sun) sun.animateSun();
@@ -245,6 +214,7 @@ function animate() {
 
 renderer.setAnimationLoop(animate);
 
+// so the models don't squish/stretch when resizing the window
 function handleWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight; // update camera aspect ratio
   camera.updateProjectionMatrix(); // update camera projection matrix

@@ -25,17 +25,6 @@ export class Neptune {
       (gltf) => {
         this.neptuneMesh = gltf.scene;
 
-        // const box = new THREE.Box3().setFromObject(this.neptuneMesh);
-        // const size = box.getSize(new THREE.Vector3());
-        // console.log(
-        //   "Neptune width:",
-        //   size.x,
-        //   "height:",
-        //   size.y,
-        //   "depth:",
-        //   size.z
-        // );
-
         this.neptuneMesh.traverse((child) => {
           if (child.isMesh) {
             child.geometry.computeBoundingSphere();

@@ -25,17 +25,6 @@ export class Mercury {
       (gltf) => {
         this.mercuryMesh = gltf.scene;
 
-        // const box = new THREE.Box3().setFromObject(this.mercuryMesh);
-        // const size = box.getSize(new THREE.Vector3());
-        // console.log(
-        //   "Mercury width:",
-        //   size.x,
-        //   "height:",
-        //   size.y,
-        //   "depth:",
-        //   size.z
-        // );
-
         this.mercuryMesh.traverse((child) => {
           if (child.isMesh) {
             child.geometry.computeBoundingSphere();

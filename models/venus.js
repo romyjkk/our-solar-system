@@ -25,17 +25,6 @@ export class Venus {
       (gltf) => {
         this.venusMesh = gltf.scene;
 
-        // const box = new THREE.Box3().setFromObject(this.venusMesh);
-        // const size = box.getSize(new THREE.Vector3());
-        // console.log(
-        //   "Venus width:",
-        //   size.x,
-        //   "height:",
-        //   size.y,
-        //   "depth:",
-        //   size.z
-        // );
-
         this.venusMesh.traverse((child) => {
           if (child.isMesh) {
             child.geometry.computeBoundingSphere();
@@ -51,8 +40,6 @@ export class Venus {
   }
 
   animateVenus() {
-    // if (this.mixer) this.mixer.update(0.001);
-
     if (this.venusMesh) {
       this.venusMesh.rotation.y += 0.001;
     }

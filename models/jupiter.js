@@ -24,17 +24,6 @@ export class Jupiter {
       0,
       (gltf) => {
         this.jupiterMesh = gltf.scene;
-
-        // const box = new THREE.Box3().setFromObject(this.jupiterMesh);
-        // const size = box.getSize(new THREE.Vector3());
-        // console.log(
-        //   "Jupiter width:",
-        //   size.x,
-        //   "height:",
-        //   size.y,
-        //   "depth:",
-        //   size.z
-        // );
       }
     );
   }

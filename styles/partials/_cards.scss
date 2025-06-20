@@ -22,13 +22,8 @@
     margin: 0 5%;
     justify-content: flex-end;
     position: relative;
-    // scroll-snap-type: y mandatory;
-    // z-index: 1;
     .info {
-      // scroll-snap-align: start;
       align-self: flex-end;
-      // position: sticky;
-      // top: 25%;
       padding: 4rem;
       outline-offset: -1rem;
       max-width: 500px;
@@ -40,9 +35,6 @@
       width: 100%;
       height: fit-content;
       z-index: 2;
-      // margin-top: -10%;
-      // margin: -10% 0;
-      // opacity: 0;
       h1,
       h2,
       p {
@@ -118,10 +110,4 @@
   .filler {
     height: 100vh;
   }
-  // .card-container:nth-child(odd) {
-  //   justify-content: flex-start;
-  // }
-  // .card-container:nth-child(even) {
-  //   justify-content: flex-end;
-  // }
 }

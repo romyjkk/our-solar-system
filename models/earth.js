@@ -25,17 +25,6 @@ export class Earth {
       (gltf) => {
         this.earthMesh = gltf.scene;
 
-        // const box = new THREE.Box3().setFromObject(this.earthMesh);
-        // const size = box.getSize(new THREE.Vector3());
-        // console.log(
-        //   "Earth width:",
-        //   size.x,
-        //   "height:",
-        //   size.y,
-        //   "depth:",
-        //   size.z
-        // );
-
         this.earthMesh.traverse((child) => {
           if (child.isMesh) {
             child.geometry.computeBoundingSphere();
