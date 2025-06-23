@@ -2,7 +2,7 @@
 
 This project was made with THREE.js and GSAP. I got all the beautiful models from Sketchfab and will link them down below.
 
-This project idea has been in my mind for a while now. It's definitely not original, many people have made something like this before me, but I had a lot of fun.
+This project idea has been in my mind for a while now. It's definitely not original, many people have made something like this before me, but I had a lot of fun. It's also not scientifically accurate, you can read more about that down below.
 
 ## Run this yourself
 
@@ -24,7 +24,13 @@ Our very own solar system where you could zoom in, out and read a few facts abou
 To challenge myself even more, I decided I wanted to work with JavaScript classes, modules and also JSON data, where I stored the camera position and also the spots where the camera should look at. I enlisted the help of my [amazing boyfriend](https://github.com/kevvie303),
 who is a skilled back-end developer and helped me make my JavaScript game a lot better and also more readable. I'd say he's a better help than ChatGPT or Github Copilot, but maybe I'm a little biased.
 
-This is my first project working with Three.js and GSAP, and it's definitely not perfect. But this project was more about growth than perfection for me. Performance wise it can be a little bit laggy and it's not very pretty on small or really big screens. Both are things I'd like to improve sometime, either in this project or future ones.
+This is my first project working with Three.js and GSAP, and it's definitely not perfect. But this project was more about growth than perfection for me. Performance wise it can be a little bit laggy and it's not very pretty on small or really big screens. I used different camera positions so the models wouldn't get cut off on smaller laptops, but I have found it's quite difficult to make the planets look the same when in focus, since they're all different 3D models and I scaled them up/down depending on the model size.
+
+## Disclaimers
+
+This website is not scientifically accurate. The scale of the planets, sun and distance aren't correct and neither are their axial tilt, rotation speed and direction.
+
+ScrollTrigger also turned out to be a big challenge, which is why the information cards aren't perfectly centered. As a perfectionist this is very annoying, but I decided to let this go for now, for the sake of my sanity.
 
 # Sources
 
