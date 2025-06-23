@@ -148,6 +148,7 @@ async function main() {
 
   // loop through each planet (and one sun) and create scroll trigger for each
   planetData.forEach((planet) => {
+    const width = window.innerWidth;
     // setup gsap timeline
     const animation = gsap.timeline({
       scrollTrigger: {
@@ -163,8 +164,18 @@ async function main() {
       },
     });
     // gsap timeline, move camera position and lookAt target
-    animation
-      .to(
+    if (width < 1600) {
+      animation.to(
+        camera.position,
+        {
+          x: planet.camera.x,
+          y: planet.camera.y,
+          z: planet.cameraSmall.z,
+        },
+        0
+      );
+    } else {
+      animation.to(
         camera.position,
         {
           x: planet.camera.x,
@@ -172,7 +183,9 @@ async function main() {
           z: planet.camera.z,
         },
         0
-      )
+      );
+    }
+    animation
       .to(
         lookAtTarget,
         {

@@ -2,50 +2,60 @@
     "planets": [
         {
             "name": "sun",
+            "cameraSmall": { "x": 0, "y": 0, "z": 35 },
             "camera": { "x": 0, "y": 0, "z": 35 },
             "lookAt": { "x": 10, "y": 0, "z": 0 }
         },
         { "name": "mercury",
+            "cameraSmall": { "x": 0, "y": 0, "z": 41.5 },
             "camera": { "x": 0.8, "y": 0, "z": 41 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
             "name": "venus",
+            "cameraSmall": { "x": 0, "y": 0, "z": 64 },
             "camera": { "x": 2, "y": 0, "z": 63 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
             "name": "earth",
-            "camera": { "x": 2, "y": 0, "z": 83 },
+            "cameraSmall": { "x": 0, "y": 0, "z": 85 },
+            "camera": { "x": 2, "y": 0, "z": 84 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
             "name": "mars",
+            "cameraSmall": { "x": 0, "y": 0, "z": 103 },
             "camera": { "x": 1, "y": 0, "z": 102 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
             "name": "jupiter",
+            "cameraSmall": { "x": 0, "y": 0, "z": 124 },
             "camera": { "x": 1.5, "y": 0, "z": 123 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
             "name": "saturn",
+            "cameraSmall": { "x": 0, "y": 0, "z": 146 },
             "camera": { "x": 2, "y": 0, "z": 145 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
             "name": "uranus",
+            "cameraSmall": { "x": 0.5, "y": 0, "z": 162 },
             "camera": { "x": 0.5, "y": 0, "z": 161.5 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
             "name": "neptune",
+            "cameraSmall": { "x": 0, "y": 0, "z": 182.5 },
             "camera": { "x": 0.5, "y": 0, "z": 182.5 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
             "name": "zoomed-out",
+            "cameraSmall": { "x": 0, "y": 0, "z": 235 },
             "camera": { "x": 50, "y": 10, "z": 220 },
             "lookAt": { "x": 0, "y": 0, "z": 0 }
         }
