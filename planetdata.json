@@ -43,6 +43,11 @@
             "name": "neptune",
             "camera": { "x": 0.5, "y": 0, "z": 182.5 },
             "lookAt": { "x": -10, "y": 0, "z": 0 }
+        },
+        {
+            "name": "zoomed-out",
+            "camera": { "x": 50, "y": 10, "z": 220 },
+            "lookAt": { "x": 0, "y": 0, "z": 0 }
         }
     ]
 }

@@ -22,6 +22,7 @@
     margin: 0 5%;
     justify-content: flex-end;
     position: relative;
+    opacity: 0;
     .info {
       align-self: flex-end;
       padding: 4rem;
@@ -45,10 +46,12 @@
         height: 100%;
         position: absolute;
         top: 0;
-        background-color: #0c4526;
-        opacity: 90%;
+        // background-color: #0c4526;
+        background-color: #0a3f23;
+        // opacity: 90%;
         z-index: -1;
         left: 0;
+        clip-path: polygon(99% 75%, 100% 0%, 0% 0%, 0% 100%, 75% 100%);
       }
       .top-right,
       .bottom-left {
@@ -72,37 +75,37 @@
       .top-right {
         top: 1rem;
         right: 1rem;
-        border-top: 0.5rem solid #25bc6a;
-        border-right: 0.5rem solid #25bc6a;
+        border-top: 0.7rem solid #25bc6a;
+        border-right: 0.7rem solid #25bc6a;
         &::before {
-          border-top: 0.5rem solid #25bc6a;
-          border-left: 0.5rem solid transparent;
-          left: -0.5rem;
-          top: -0.5rem;
+          border-top: 0.7rem solid #25bc6a;
+          border-left: 0.7rem solid transparent;
+          left: -0.7rem;
+          top: -0.7rem;
         }
         &::after {
-          border-top: 0.5rem solid #25bc6a;
-          border-left: 0.5rem solid transparent;
-          right: -0.5rem;
-          bottom: -0.5rem;
+          border-top: 0.7rem solid #25bc6a;
+          border-left: 0.7rem solid transparent;
+          right: -0.7rem;
+          bottom: -0.7rem;
         }
       }
       .bottom-left {
         bottom: 1rem;
         left: 1rem;
-        border-bottom: 0.5rem solid #25bc6a;
-        border-left: 0.5rem solid #25bc6a;
+        border-bottom: 0.7rem solid #25bc6a;
+        border-left: 0.7rem solid #25bc6a;
         &::before {
-          border-bottom: 0.5rem solid #25bc6a;
-          border-right: 0.5rem solid transparent;
-          left: -0.5rem;
-          top: -0.5rem;
+          border-bottom: 0.7rem solid #25bc6a;
+          border-right: 0.7rem solid transparent;
+          left: -0.7rem;
+          top: -0.7rem;
         }
         &::after {
-          border-bottom: 0.5rem solid #25bc6a;
-          border-right: 0.5rem solid transparent;
-          right: -0.5rem;
-          bottom: -0.5rem;
+          border-bottom: 0.7rem solid #25bc6a;
+          border-right: 0.7rem solid transparent;
+          right: -0.7rem;
+          bottom: -0.7rem;
         }
       }
     }

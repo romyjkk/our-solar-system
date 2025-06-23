@@ -76,7 +76,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   10000
 ); // create a camera: 45 deg fov, aspect ratio of camera, set near and far plane
-camera.position.set(10, 0, 0);
+camera.position.set(10, 0, 35);
 camera.rotation.set(0, 0, 0);
 // camera.lookAt(5, 0, 39); // look at the center of the scene
 
@@ -129,7 +129,7 @@ let neptune = new Neptune(modelLoader);
 
 // lookAt target setup for scrolltrigger
 
-const lookAtTarget = new THREE.Vector3(10, 0, 0);
+const lookAtTarget = new THREE.Vector3(0, 0, 0);
 
 // async function to setup loop for scrolltrigger
 
@@ -181,7 +181,15 @@ async function main() {
           z: planet.lookAt.z,
         },
         0
+      )
+      .to(
+        `#${planet.name}`,
+        {
+          opacity: 1,
+        },
+        0
       );
+
     console.log(planet.name);
   });
 }
@@ -190,7 +198,7 @@ ScrollTrigger.refresh();
 main();
 
 // smooth scrolling, very satisfying
-let smoother = ScrollSmoother.create({
+ScrollSmoother.create({
   wrapper: "#main-container",
   content: "#scroll-container",
   // smooth: 1,
