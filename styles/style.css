@@ -30,8 +30,29 @@ p {
   z-index: 10;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
+}
+#loader h1 {
+  font-size: 3rem;
+}
+#loader span {
+  font-family: "volunmo", sans-serif;
+  font-size: 3rem;
+}
+#loader #progress-bar {
+  height: 4rem;
+  border-radius: 0px;
+  transform: skew(-40deg);
+  max-width: 450px;
+  width: 100%;
+}
+#loader #progress-bar::-webkit-progress-bar {
+  background-color: #0b3f23;
+}
+#loader #progress-bar::-webkit-progress-value {
+  background-color: #25bc6a;
 }
 
 header {
@@ -137,6 +158,7 @@ section.scrolling {
 }
 #scroll-container .intro p {
   margin-bottom: 2rem;
+  font-size: 1.8rem;
 }
 #scroll-container .filler {
   height: 100vh;

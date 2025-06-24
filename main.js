@@ -149,12 +149,11 @@ async function main() {
   // loop through each planet (and one sun) and create scroll trigger for each
   planetData.forEach((planet) => {
     const textElement = document.querySelector(`#${planet.name} .info h2`);
-    const card = document.querySelector(`${planet.name}`);
-    // card.style.opacity = 0
+    if (textElement) {
+      textElement.style.opacity = 0;
+    }
     const width = window.innerWidth;
-    textElement.style.opacity = 0;
     // setup gsap timeline
-
     const animation = gsap.timeline({
       scrollTrigger: {
         trigger: `#${planet.name}`,
@@ -168,19 +167,22 @@ async function main() {
         scrub: true,
         snap: 1,
         ease: "power1.inOut",
+        markers: true,
         // on enter: start typing animation, with a small delay for visibility
         onEnter: () => {
           setTimeout(() => {
-            if (
-              textElement &&
-              !textElement.classList.contains("typing-animation")
-            ) {
-              textElement.style.opacity = 1;
-              textElement.classList.add("typing-animation");
+            if (textElement) {
+              if (!textElement.classList.contains("typing-animation")) {
+                textElement.style.opacity = 1;
+                textElement.classList.add("typing-animation");
+              }
+            } else {
+              return;
             }
-          }, 500);
+          }, 300);
         },
       },
+
       onUpdate: () => {
         camera.lookAt(planet.lookAt.x, planet.lookAt.y, planet.lookAt.z);
       },
@@ -217,31 +219,29 @@ async function main() {
         0
       );
     }
-    animation
-      .to(
-        lookAtTarget,
-        {
-          x: planet.lookAt.x,
-          y: planet.lookAt.y,
-          z: planet.lookAt.z,
-        },
-        0
-      )
-      // change opacity and position of the card for a smooth entrance
-      .fromTo(
-        `#${planet.name} .info`,
-        {
-          x: 150,
-          opacity: 0,
-        },
-        {
-          x: 0,
-          opacity: 1,
-        },
-        0
-      );
+    animation.to(
+      lookAtTarget,
+      {
+        x: planet.lookAt.x,
+        y: planet.lookAt.y,
+        z: planet.lookAt.z,
+      },
+      0
+    );
+    // change opacity and position of the card for a smooth entrance
 
-    console.log(planet.name);
+    animation.fromTo(
+      `#${planet.name} .info`,
+      {
+        x: 150,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+      },
+      0
+    );
   });
 }
 

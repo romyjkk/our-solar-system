@@ -63,9 +63,9 @@
             "lookAt": { "x": -10, "y": 0, "z": 0 }
         },
         {
-            "name": "zoomed-out",
-            "cameraSmall": { "x": 0, "y": 0, "z": 235 },
-            "cameraMedium": { "x": 0, "y": 0, "z": 235 },
+            "name": "solar-system",
+            "cameraSmall": { "x": 0, "y": 10, "z": 235 },
+            "cameraMedium": { "x": 0, "y": 10, "z": 235 },
             "camera": { "x": 50, "y": 10, "z": 220 },
             "lookAt": { "x": 0, "y": 0, "z": 0 }
         }

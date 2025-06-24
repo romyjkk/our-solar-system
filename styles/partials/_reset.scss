@@ -30,8 +30,29 @@ p {
   z-index: 10;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
+  h1 {
+    font-size: 3rem;
+  }
+  span {
+    font-family: "volunmo", sans-serif;
+    font-size: 3rem;
+  }
+  #progress-bar {
+    height: 4rem;
+    border-radius: 0px;
+    transform: skew(-40deg);
+    max-width: 450px;
+    width: 100%;
+    &::-webkit-progress-bar {
+      background-color: #0b3f23;
+    }
+    &::-webkit-progress-value {
+      background-color: #25bc6a;
+    }
+  }
 }
 
 header {
