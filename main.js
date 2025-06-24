@@ -158,13 +158,18 @@ async function main() {
     const animation = gsap.timeline({
       scrollTrigger: {
         trigger: `#${planet.name}`,
-        start: "top 70%",
-        end: "bottom 70%",
+        // depending on the width of the screen, set different start and end points
+        start: () => {
+          return width < 1700 ? "top 75%" : "top 70%";
+        },
+        end: () => {
+          return width < 1700 ? "bottom 75%" : "bottom 70%";
+        },
         scrub: true,
         snap: 1,
         ease: "power1.inOut",
+        // on enter: start typing animation, with a small delay for visibility
         onEnter: () => {
-          // card.style.opacity = 1;
           setTimeout(() => {
             if (
               textElement &&
@@ -173,11 +178,8 @@ async function main() {
               textElement.style.opacity = 1;
               textElement.classList.add("typing-animation");
             }
-          }, 1000);
+          }, 500);
         },
-        // onEnterBack: () => {
-        //   textElement.classList.add("typing-animation");
-        // },
       },
       onUpdate: () => {
         camera.lookAt(planet.lookAt.x, planet.lookAt.y, planet.lookAt.z);
@@ -225,6 +227,7 @@ async function main() {
         },
         0
       )
+      // change opacity and position of the card for a smooth entrance
       .fromTo(
         `#${planet.name} .info`,
         {
