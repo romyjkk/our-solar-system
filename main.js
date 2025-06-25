@@ -167,7 +167,6 @@ async function main() {
         scrub: true,
         snap: 1,
         ease: "power1.inOut",
-        markers: true,
         // on enter: start typing animation, with a small delay for visibility
         onEnter: () => {
           setTimeout(() => {
@@ -252,7 +251,29 @@ main();
 ScrollSmoother.create({
   wrapper: "#main-container",
   content: "#scroll-container",
-  // smooth: 1,
+});
+
+// sound
+
+const soundButton = document.getElementById("sound-control");
+const soundOff = document.getElementById("off");
+const soundOn = document.getElementById("on");
+const audio = new Audio("./src/cornfield-chase.mp3");
+
+let soundIsOn = false;
+
+soundButton.addEventListener("click", () => {
+  if (soundIsOn) {
+    audio.pause();
+    soundIsOn = false;
+    soundOff.classList.remove("invisible");
+    soundOn.classList.add("invisible");
+  } else {
+    audio.play();
+    soundIsOn = true;
+    soundOn.classList.remove("invisible");
+    soundOff.classList.add("invisible");
+  }
 });
 
 // animate function

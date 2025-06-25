@@ -15,10 +15,8 @@ body {
   width: 100vw;
 }
 
-h1,
-h2,
-p {
-  margin: 0;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 #loader {
@@ -33,13 +31,6 @@ p {
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  h1 {
-    font-size: 3rem;
-  }
-  span {
-    font-family: "volunmo", sans-serif;
-    font-size: 3rem;
-  }
   #progress-bar {
     height: 4rem;
     border-radius: 0px;
@@ -56,35 +47,38 @@ p {
 }
 
 header {
-  color: white;
   position: fixed;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  z-index: 2;
+  margin: 1rem 0 0 1rem;
+  button {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #off {
+      opacity: 40%;
+    }
+  }
 }
 
-header nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 2rem;
+.visible {
+  visibility: visible;
 }
 
-header div {
-  display: flex;
-  flex-direction: row;
-  gap: 5em;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 900;
-}
-
-p,
-a {
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
+.invisible {
+  visibility: hidden;
 }
 
 #container canvas {
@@ -94,54 +88,6 @@ a {
   top: 0;
   left: 0;
   z-index: -10;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Darknet", sans-serif;
-  color: white;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #25bc6a;
-}
-
-p,
-a,
-li {
-  font-family: "volunmo", sans-serif;
-  font-size: 1.6rem;
-}
-
-@media (min-width: 1400px) {
-  // h2 {
-  //   font-size: 2rem;
-  // }
-  p {
-    font-size: 1.6rem;
-  }
-}
-
-@media (min-width: 1600px) {
-  h2 {
-    font-size: 2.2rem;
-  }
-  p {
-    font-size: 1.8rem;
-  }
-}
-
-button {
-  background-color: #03170c;
-  color: white;
-  border: none;
-  padding: 0 2rem 0.3rem 2rem;
-  font-family: "volunmo", sans-serif;
-  font-size: 2rem;
-  align-self: center;
 }
 
 section.scrolling {

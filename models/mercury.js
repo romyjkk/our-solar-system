@@ -25,6 +25,8 @@ export class Mercury {
       (gltf) => {
         this.mercuryMesh = gltf.scene;
 
+        // geometry adjustment so it spins around their axis
+
         this.mercuryMesh.traverse((child) => {
           if (child.isMesh) {
             child.geometry.computeBoundingSphere();

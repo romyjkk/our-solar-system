@@ -25,6 +25,8 @@ export class Earth {
       (gltf) => {
         this.earthMesh = gltf.scene;
 
+        // geometry adjustment so it spins around their axis
+
         this.earthMesh.traverse((child) => {
           if (child.isMesh) {
             child.geometry.computeBoundingSphere();

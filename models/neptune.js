@@ -25,6 +25,8 @@ export class Neptune {
       (gltf) => {
         this.neptuneMesh = gltf.scene;
 
+        // geometry adjustment so it spins around their axis
+
         this.neptuneMesh.traverse((child) => {
           if (child.isMesh) {
             child.geometry.computeBoundingSphere();

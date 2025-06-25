@@ -1,0 +1,82 @@
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: "Darknet", sans-serif;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #25bc6a;
+}
+
+p {
+  color: #25bc6a;
+}
+
+p,
+a {
+  font-family: "volunmo", sans-serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+span {
+  font-family: "volunmo", sans-serif;
+  font-size: 3rem;
+}
+
+#scroll-container {
+  .intro {
+    h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    p {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #ffffff;
+    }
+  }
+  .info {
+    h2 {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .typing-animation {
+      animation: typing 3s steps(40, end);
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}

@@ -2,6 +2,8 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js"; // Add this line
 
+// class that helps with loading models
+
 export class ModelLoader {
   constructor(loadingManager) {
     this.loader = new GLTFLoader(loadingManager);

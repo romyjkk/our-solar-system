@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+// light setup class, a bit underused
+
 export class LightSetup {
   constructor(modelLoader) {
     this.modelLoader = modelLoader;

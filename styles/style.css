@@ -15,10 +15,8 @@ body {
   width: 100vw;
 }
 
-h1,
-h2,
-p {
-  margin: 0;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 #loader {
@@ -33,13 +31,6 @@ p {
   gap: 2rem;
   align-items: center;
   justify-content: center;
-}
-#loader h1 {
-  font-size: 3rem;
-}
-#loader span {
-  font-family: "volunmo", sans-serif;
-  font-size: 3rem;
 }
 #loader #progress-bar {
   height: 4rem;
@@ -56,35 +47,38 @@ p {
 }
 
 header {
-  color: white;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  z-index: 2;
+  margin: 1rem 0 0 1rem;
+}
+header button {
+  background: none;
+  border: none;
   width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+header button svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header button #off {
+  opacity: 40%;
 }
 
-header nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 2rem;
+.visible {
+  visibility: visible;
 }
 
-header div {
-  display: flex;
-  flex-direction: row;
-  gap: 5em;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 900;
-}
-
-p,
-a {
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
+.invisible {
+  visibility: hidden;
 }
 
 #container canvas {
@@ -94,49 +88,6 @@ a {
   top: 0;
   left: 0;
   z-index: -10;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Darknet", sans-serif;
-  color: white;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #25bc6a;
-}
-
-p,
-a,
-li {
-  font-family: "volunmo", sans-serif;
-  font-size: 1.6rem;
-}
-
-@media (min-width: 1400px) {
-  p {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 1600px) {
-  h2 {
-    font-size: 2.2rem;
-  }
-  p {
-    font-size: 1.8rem;
-  }
-}
-button {
-  background-color: #03170c;
-  color: white;
-  border: none;
-  padding: 0 2rem 0.3rem 2rem;
-  font-family: "volunmo", sans-serif;
-  font-size: 2rem;
-  align-self: center;
 }
 
 section.scrolling {
@@ -152,13 +103,6 @@ section.scrolling {
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-}
-#scroll-container .intro h1 {
-  margin-top: 1rem;
-}
-#scroll-container .intro p {
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
 }
 #scroll-container .filler {
   height: 100vh;
@@ -184,26 +128,6 @@ section.scrolling {
   gap: 2rem;
   width: 100%;
   z-index: 2;
-}
-#scroll-container .card-container .info h1,
-#scroll-container .card-container .info h2,
-#scroll-container .card-container .info p {
-  color: #25bc6a;
-}
-#scroll-container .card-container .info h2 {
-  overflow: hidden;
-  white-space: nowrap;
-}
-#scroll-container .card-container .info .typing-animation {
-  animation: typing 3s steps(40, end);
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
 }
 #scroll-container .card-container .info .bg {
   width: 100%;
@@ -279,5 +203,80 @@ section.scrolling {
 @media (min-width: 1600px) {
   #scroll-container .card-container .info {
     height: 400px;
+  }
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: "Darknet", sans-serif;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #25bc6a;
+}
+
+p {
+  color: #25bc6a;
+}
+
+p,
+a {
+  font-family: "volunmo", sans-serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+span {
+  font-family: "volunmo", sans-serif;
+  font-size: 3rem;
+}
+
+#scroll-container .intro h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+#scroll-container .intro p {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffffff;
+}
+#scroll-container .info h2 {
+  overflow: hidden;
+  white-space: nowrap;
+}
+#scroll-container .info .typing-animation {
+  animation: typing 3s steps(40, end);
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  p {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1600px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1.8rem;
   }
 }/*# sourceMappingURL=style.css.map */

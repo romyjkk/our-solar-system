@@ -26,6 +26,8 @@ export class Saturn {
         this.saturnMesh = gltf.scene;
         this.animations = gltf.animations;
 
+        // model has its own animation built in
+
         if (this.animations && this.animations.length > 0) {
           this.mixer = new THREE.AnimationMixer(this.saturnMesh);
           this.animationAction = this.mixer.clipAction(this.animations[0]);

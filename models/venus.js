@@ -25,6 +25,8 @@ export class Venus {
       (gltf) => {
         this.venusMesh = gltf.scene;
 
+        // geometry adjustment so it spins around their axis
+
         this.venusMesh.traverse((child) => {
           if (child.isMesh) {
             child.geometry.computeBoundingSphere();
