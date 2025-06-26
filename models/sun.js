@@ -13,7 +13,7 @@ export class Sun {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/sun_model",
+      "sun_model",
       0.01,
       0.01,
       0.01, // scale

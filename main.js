@@ -258,7 +258,7 @@ ScrollSmoother.create({
 const soundButton = document.getElementById("sound-control");
 const soundOff = document.getElementById("off");
 const soundOn = document.getElementById("on");
-const audio = new Audio("./src/cornfield-chase.mp3");
+const audio = new Audio("src/cornfield-chase.mp3");
 
 let soundIsOn = false;
 

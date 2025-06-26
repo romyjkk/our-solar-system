@@ -12,7 +12,7 @@ export class Neptune {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/neptune-2",
+      "neptune-2",
       0.35,
       0.35,
       0.35,
