@@ -36,7 +36,7 @@ let planetData = [];
 
 async function fetchJSON() {
   try {
-    const response = await fetch("./planetdata.json");
+    const response = await fetch("planetdata.json");
     const data = await response.json();
     planetData = data.planets;
     return planetData;
