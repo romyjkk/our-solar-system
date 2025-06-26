@@ -12,7 +12,7 @@ export class Jupiter {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/realistic_jupiter/",
+      "public/realistic_jupiter",
       0.008,
       0.008,
       0.008,

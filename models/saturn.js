@@ -12,7 +12,7 @@ export class Saturn {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/saturn_planet/",
+      "public/saturn_planet",
       0.9,
       0.9,
       0.9,

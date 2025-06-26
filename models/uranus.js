@@ -12,7 +12,7 @@ export class Uranus {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/uranus-2/",
+      "public/uranus-2",
       0.0008,
       0.0008,
       0.0008,

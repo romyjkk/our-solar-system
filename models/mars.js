@@ -12,7 +12,7 @@ export class Mars {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/mars-2/",
+      "public/mars-2",
       0.3,
       0.3,
       0.3,

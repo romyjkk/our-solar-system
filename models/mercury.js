@@ -12,7 +12,7 @@ export class Mercury {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/mercury_enhanced_color/",
+      "public/mercury_enhanced_color",
       0.35,
       0.35,
       0.35,

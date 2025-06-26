@@ -12,7 +12,7 @@ export class Venus {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/venus-2/",
+      "public/venus-2",
       0.85,
       0.85,
       0.85,

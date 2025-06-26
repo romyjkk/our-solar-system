@@ -12,7 +12,7 @@ export class Earth {
   loadModel() {
     this.modelLoader.LoadModel(
       "scene.gltf",
-      "public/earth-2/",
+      "public/earth-2",
       0.81,
       0.81,
       0.81,
